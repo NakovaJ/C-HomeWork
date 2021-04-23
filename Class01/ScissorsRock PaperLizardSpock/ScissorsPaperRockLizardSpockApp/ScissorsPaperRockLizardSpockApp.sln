@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScissorsPaperRockLizardSpock", "ScissorsPaperRockLizardSpock\ScissorsPaperRockLizardSpock.csproj", "{973F4897-24A8-4E21-8213-50877577911A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppClassLibrary", "AppClassLibrary\AppClassLibrary.csproj", "{ABD090CD-143E-4FFE-9C32-24F6167F10B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{973F4897-24A8-4E21-8213-50877577911A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{973F4897-24A8-4E21-8213-50877577911A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{973F4897-24A8-4E21-8213-50877577911A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{973F4897-24A8-4E21-8213-50877577911A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABD090CD-143E-4FFE-9C32-24F6167F10B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD090CD-143E-4FFE-9C32-24F6167F10B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD090CD-143E-4FFE-9C32-24F6167F10B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD090CD-143E-4FFE-9C32-24F6167F10B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31A5EB3B-02FD-42FC-91AE-36DDC2FACF62}
+	EndGlobalSection
+EndGlobal
