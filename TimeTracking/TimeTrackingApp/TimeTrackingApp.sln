@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTrackingApp", "TimeTrackingApp\TimeTrackingApp.csproj", "{47666E5B-DAD5-4D60-93E1-56FA505AB5B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TImeTracking.Domain", "TImeTracking.Domain\TImeTracking.Domain.csproj", "{FCB1E0DA-E5B4-408F-BC3E-4CCDEDB6DE70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracking.Services", "TimeTracking.Services\TimeTracking.Services.csproj", "{6A25FF9F-6747-48F0-8698-98A032E22359}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47666E5B-DAD5-4D60-93E1-56FA505AB5B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47666E5B-DAD5-4D60-93E1-56FA505AB5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47666E5B-DAD5-4D60-93E1-56FA505AB5B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47666E5B-DAD5-4D60-93E1-56FA505AB5B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCB1E0DA-E5B4-408F-BC3E-4CCDEDB6DE70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB1E0DA-E5B4-408F-BC3E-4CCDEDB6DE70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB1E0DA-E5B4-408F-BC3E-4CCDEDB6DE70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB1E0DA-E5B4-408F-BC3E-4CCDEDB6DE70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A25FF9F-6747-48F0-8698-98A032E22359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A25FF9F-6747-48F0-8698-98A032E22359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A25FF9F-6747-48F0-8698-98A032E22359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A25FF9F-6747-48F0-8698-98A032E22359}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C018B5DF-AA77-489F-8E40-89B81F295B61}
+	EndGlobalSection
+EndGlobal
