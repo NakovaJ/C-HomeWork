@@ -8,7 +8,7 @@ namespace TImeTracking.Domain.Core.Interfaces
     {
  
         TimeSpan TimeSpentOnActivityThisTime { get; set; }
-        DateTime TotalTimeSpentOnActivity { get; set; }
+        TimeSpan TotalTimeActivity { get; set; }
 
         TimeSpan TrackActivity();
     }

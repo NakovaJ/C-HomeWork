@@ -6,6 +6,6 @@ namespace TImeTracking.Domain.Core.Interfaces
 {
     public interface IWork
     {
-        void SelectWorkingLocation();
+        void SelectWorkingLocation(int x);
     }
 }

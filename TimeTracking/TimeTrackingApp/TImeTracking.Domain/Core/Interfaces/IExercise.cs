@@ -6,7 +6,9 @@ namespace TImeTracking.Domain.Core.Interfaces
 {
     public interface IExercise
     {
-        void SelectTypeOfExercise();
-       
+        void SelectTypeOfExercise(int x);
+
+
+
     }
 }

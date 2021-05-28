@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using TImeTracking.Domain.Core.Enums;
 using TImeTracking.Domain.Core.Interfaces;
 
@@ -8,58 +9,83 @@ namespace TImeTracking.Domain.Core.Entities
 {
     public class Exercising : Activity,IExercise
     {
-        ExercisingType TypeOfExercise { get; set; }
+        public ExercisingType TypeOfExercise { get; set; }
+        public Exercising()
+        {
+            TypeOfActivity = ActivityType.Exercising;
+        }
         public override void Print()
         {
-            Console.WriteLine($"Currently exercising -- Total hours spent on exercising {TotalTimeSpentOnActivity}h so far!");
+            Console.WriteLine($"Currently exercising -- Total hours spent on exercising {TotalTimeActivity}h so far!");
 
         }
-
-        public void SelectTypeOfExercise()
+        public override TimeSpan TrackActivity()
         {
+            DateTime first = DateTime.Now;
+            DateTime second;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("Curentlly exercising ");
+            Thread.Sleep(1000);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write(".");
+            Thread.Sleep(1100);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(".");
+            Thread.Sleep(1200);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write(".");
+            Console.ResetColor();
+            
+            Console.WriteLine();
+            Console.WriteLine("Press enter when you finish exercising!");
             while (true)
             {
-
-                Console.WriteLine("Please select the type of exercising by selecting one of the provided numbers!");
-                Console.WriteLine("1.General");
-                Console.WriteLine("2.Running");
-                Console.WriteLine("3.Football");
-                Console.WriteLine("4.Tennis");
-                Console.WriteLine("5.Yoga");
-                Console.WriteLine("6.Pillates");
-                Console.WriteLine("7.OtherSport");
-
-                string userInput = Console.ReadLine();
-                if (userInput == "1" || userInput == "2" || userInput == "3" || userInput == "4" || userInput == "5" || userInput == "6" || userInput == "7")
+                if (Console.ReadLine() == "")
                 {
-                    switch (userInput)
-                    {
-                        case "1":
-                            TypeOfExercise = ExercisingType.General;
-                            break;
-                        case "2":
-                            TypeOfExercise = ExercisingType.Running;
-                            break;
-                        case "3":
-                            TypeOfExercise = ExercisingType.Footbal;
-                            break;
-                        case "4":
-                            TypeOfExercise = ExercisingType.Tennis;
-                            break;
-                        case "5":
-                            TypeOfExercise = ExercisingType.Yoga;
-                            break;
-                        case "6":
-                            TypeOfExercise = ExercisingType.Pillates;
-                            break;
-                        case "7":
-                            TypeOfExercise = ExercisingType.OtherSport;
-                            break;
-                    }
+                    second = DateTime.Now;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("You have finished exercising!");
+                    Console.WriteLine();
+                    Console.ResetColor();
                     break;
                 }
 
             }
+            TimeSpentOnActivityThisTime = second - first;
+            TotalTimeActivity += TimeSpentOnActivityThisTime;
+            return TimeSpentOnActivityThisTime;
+        }
+
+        public void SelectTypeOfExercise(int x)
+        {
+            
+                    switch (x)
+                    {
+                        case 1:
+                            TypeOfExercise = ExercisingType.General;
+                            break;
+                        case 2:
+                            TypeOfExercise = ExercisingType.Running;
+                            break;
+                        case 3:
+                            TypeOfExercise = ExercisingType.Footbal;
+                            break;
+                        case 4:
+                            TypeOfExercise = ExercisingType.Tennis;
+                            break;
+                        case 5:
+                            TypeOfExercise = ExercisingType.Yoga;
+                            break;
+                        case 6:
+                            TypeOfExercise = ExercisingType.Pillates;
+                            break;
+                        case 7:
+                            TypeOfExercise = ExercisingType.OtherSport;
+                            break;
+                    }
+            
+
+           
 
 
         }

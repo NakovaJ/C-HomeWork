@@ -10,6 +10,9 @@ namespace TImeTracking.Domain.Db
     {
         List<T> GetAll();
         void Insert(T entity);
-        void Remove(T entity);
+        void RemoveById(T entity);
+        void Update(T entity);
+        T GetById(int id);
+       
     }
 }

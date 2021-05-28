@@ -7,7 +7,9 @@ namespace TImeTracking.Domain.Core.Entities
 {
     public abstract class BaseEntity : IBaseEntity
     {
+        public int Id { get; set; }
         public abstract void Print();
+        public bool ProfileActive { get; set; }
         
     }
 }

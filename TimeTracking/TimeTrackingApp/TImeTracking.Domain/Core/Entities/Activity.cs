@@ -1,24 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
+using TImeTracking.Domain.Core.Enums;
 using TImeTracking.Domain.Core.Interfaces;
 
 namespace TImeTracking.Domain.Core.Entities
 {
     public abstract class Activity : BaseEntity,IActivity
     {
- 
-        public TimeSpan TimeSpentOnActivityThisTime { get; set; }
-        public DateTime TotalTimeSpentOnActivity { get; set; }
+       public ActivityType TypeOfActivity { get; set; }
 
-        public TimeSpan TrackActivity()
+        public TimeSpan TimeSpentOnActivityThisTime { get; set; }
+        public TimeSpan TotalTimeActivity { get; set; }
+
+        public int UserDoingActivityId { get; set; }
+        public virtual TimeSpan TrackActivity()
         {
             DateTime first = DateTime.Now;
             DateTime second;
 
-
+        
             while (true)
             {
+      
                 if (Console.ReadLine() == "")
                 {
                     second = DateTime.Now;
@@ -27,7 +32,7 @@ namespace TImeTracking.Domain.Core.Entities
 
             }
             TimeSpentOnActivityThisTime = second - first;
-            TotalTimeSpentOnActivity += TimeSpentOnActivityThisTime;
+            TotalTimeActivity += TimeSpentOnActivityThisTime;
             return TimeSpentOnActivityThisTime;
         }
   
